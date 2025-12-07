@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2A Translator v2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>A2A Translator <span class="version">v2</span></h1>
+      <p>Convert A2A Spec text into real files.</p>
+    </header>
+
+    <main>
+      <!-- Configuration Section -->
+      <section class="config-panel">
+        <div class="input-group">
+          <label>Output Directory:</label>
+          <div class="row">
+            <input type="text" id="output-path" placeholder="No folder selected" readonly>
+            <button id="btn-select-folder">Select Folder</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editor Section -->
+      <section class="editor-panel">
+        <div class="toolbar">
+          <label>A2A Source Text:</label>
+          <div class="actions">
+            <button id="btn-paste" class="secondary">Paste</button>
+            <button id="btn-clear" class="danger">Clear</button>
+          </div>
+        </div>
+        <textarea id="input-text" placeholder="[A2A-PROJECT]..."></textarea>
+      </section>
+
+      <!-- Action Section -->
+      <section class="action-panel">
+        <button id="btn-generate" class="primary" disabled>Generate Project</button>
+      </section>
+
+      <!-- Logs Section -->
+      <section class="log-panel">
+        <label>Status Log:</label>
+        <div id="log-container"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

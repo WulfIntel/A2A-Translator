@@ -1,0 +1,32 @@
+{
+  "name": "a2a-translator-electron-v2",
+  "version": "2.0.0",
+  "description": "A robust Electron application to translate A2A specifications into file structures.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.teaganscott.a2atranslator",
+    "productName": "A2A Translator v2",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "keywords": [
+    "a2a",
+    "generator",
+    "electron",
+    "tool"
+  ],
+  "author": "Teagan Scott",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^39.2.6",
+    "electron-builder": "^26.0.12"
+  }
+}
